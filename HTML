@@ -1,4 +1,4 @@
-HTML 
+HTML
 
 1) What is doctype and why it is used? <!Doctype HTML> -- html4 and html5
 Reference 1:
@@ -12,28 +12,712 @@ In HTML 4.01, the <!DOCTYPE> declaration refers to a DTD, because HTML 4.01 was 
 HTML5 is not based on SGML, and therefore does not require a reference to a DTD.
 
 Reference2:
-The HTML syntax of HTML5 requires a DOCTYPE to be specified to ensure that the browser renders the page in standards mode. The DOCTYPE has no other purpose 
+The HTML syntax of HTML5 requires a DOCTYPE to be specified to ensure that the browser renders the page in standards mode. The DOCTYPE has no other purpose
 and is therefore optional for XML. Documents with an XML media type are always handled in standards mode. [DOCTYPE]
 
-The DOCTYPE declaration is <!DOCTYPE html> and is case-insensitive in the HTML syntax. DOCTYPEs from earlier versions of HTML were longer because the HTML 
-language was SGML-based and therefore required a reference to a DTD. With HTML5 this is no longer the case and the DOCTYPE is only needed to enable standards 
-mode for documents written using the HTML syntax. Browsers already do this for <!DOCTYPE html>.
+The DOCTYPE declaration is <!DOCTYPE html> and is case-insensitive in the HTML syntax. DOCTYPEs from earlier versions of HTML were longer because the HTML
+language was SGML-based and therefore required a reference to a DTD. With HTML5 this is no longer the case and the DOCTYPE is only needed to enable standards
+mode for documents written using the HTML syntax. Browsers already do this for <!DOCTYPE html
 
-Reference3:
+
+
+=================================================================================================================
 
 
 2) Differences between html4 and HTML5
+
+Reference1 :
+HTML5 has several goals which differentiate it from HTML4.
+Consistency in Handling Malformed Documents
+The primary one is consistent, defined error handling. As you know, HTML purposely supports 'tag soup', or the ability to write malformed code and have it corrected into a valid document. The problem is that the rules for doing this aren't written down anywhere. When a new browser vendor wants to enter the market, they just have to test malformed documents in various browsers (especially IE) and reverse-engineer their error handling. If they don't, then many pages won't display correctly (estimates place roughly 90% of pages on the net as being at least somewhat malformed).
+So, HTML5 is attempting to discover and codify this error handling, so that browser developers can all standardize and greatly reduce the time and money required to display things consistently. As well, long in the future after HTML has died as a document format, historians may still want to read our documents, and having a completely defined parsing algorithm will greatly aid this.
+Better Web Application Features
+The secondary goal of HTML5 is to develop the ability of the browser to be an application platform, via HTML, CSS, and Javascript. Many elements have been added directly to the language that are currently (in HTML4) Flash or JS-based hacks, such as <canvas>, <video>, and <audio>. Useful things such as Local Storage (a js-accessible browser-built-in key-value database, for storing information beyond what cookies can hold), new input types such as date for which the browser can expose easy user interface (so that we don't have to use our js-based calendar date-pickers), and browser-supported form validation will make developing web applications much simpler for the developers, and make them much faster for the users (since many things will be supported natively, rather than hacked in via javascript).
+Improved Element Semantics
+There are many other smaller efforts taking place in HTML5, such as better-defined semantic roles for existing elements (<strong> and <em> now actually mean something different, and even <b> and <i> have vague semantics that should work well when parsing legacy documents) and adding new elements with useful semantics - <article>, <section>, <header>, <aside>, and <nav> should replace the majority of <div>s used on a web page, making your pages a bit more semantic, but more importantly, easier to read. No more painful scanning to see just what that random </div> is closing - instead you'll have an obvious </header>, or </article>, making the structure of your document much more intuitive.
+
+
+Reference2 :
+
+From Wikipedia:
+	•	New parsing rules oriented towards flexible parsing and compatibility
+	•	New elements – section, video, progress, nav, meter, time, aside, canvas
+	•	New input attributes – dates and times, email, url
+	•	New attributes – ping, charset, async
+	•	Global attributes (that can be applied for every element) – id, tabindex, repeat
+	•	Deprecated elements dropped – center, font, strike
+
+
+
+Reference3:
+General Differences between HTML5 and HTML4
+
+Following are some of the major characteristics that distinguish HTML5 from HTML4.
+
+1. Simplified and Clear Syntax
+
+The syntax in HTML5 is extremely clear and simple as compared to HTML4. One example of this is the DOCTYPE element. In HTML4 the DOCTYPE declaration was too messy and lengthy and used to refer an external source. However in HTML5 DOCTYPE element has been made extremely simple. For instance a mere <!DOCTYPE html> is enough to specify the document type.
+
+2. Multimedia Elements
+
+HTML5 contains built in support for integrated multimedia files into web page via video and audio tags. Previously, in HTML4, the multimedia content was integrated in web pages via third party plugins such as Silverlight and flash.
+
+3. Accessing User Geographical location
+
+Previously in HTML4, it was an extremely cumbersome task to get the geographical locations of the visitors visiting the site. It was even difficult when the website was accessed through mobile devices. On the other hand, in HTML5 is extremely easy to get the user location. HTML5’s JS GeoLocation can be leveraged to identify the location of the user accessing the website.
+
+4. Client Side storage
+
+In HTML4, in order to store important data on client side, browser’s cache was used. However, that cache is limited and doesn’t support relational storage mechanism. In HTML5, this issue has been addressed via Web SQL database and application cache that can be access via HTML5’s JavaScript interface.
+
+5. Client Server Communication
+
+In HTML4 the communication between the client and server was done through streaming and long polling, since there are no web sockets available in HTML4. On the contrary, HTML5 contains web sockets that allow full duplex communication between clients and servers.
+
+6. JavaScript Threading Mechanism
+
+In HTML4, JavaScript and the browser interface with which user interacts, run in the same thread which affects performance. HTML5 contains JS Web Worker API which allows JavaScript and Browser interface to run in separate threads.
+
+7. Browser Compatibility
+
+As aforementioned, HTML4 is an established standard for developing browser applications and has been in use for more than 10 years. For this reason, HTML4 is compatible with almost all web-browsers. On the other hand, HTML5 is still in the process of evolution and the currently available tags are being modified and also new tags are being added. Therefore, HTML5 lags behind HTML4 in terms of compatibility with the browsers.
+
+Tag Differences in HTML4 and HTML5
+
+Several tags in HTML4 have been removed from HTML5 or their functionality has been modified. Following are some of the tags that are removed from HTML5 or have different functionality in HTML5 as compared to HTML4.
+
+1. <Applet> removed <Object> Added in HTML5
+
+HTML4 contained an <applet> tag that was used for displaying applets in a web browser. However, in HTML5, this applet tag has been removed. In order to display applet type items, a new <object> tag has been introduced in HTML5.
+
+2. <Acronym> removed <Abbr> Added in HTML5
+
+HTML4 contained an <acronym> tag that was used for displaying abbreviation’s in a web browser. However, in HTML5, this tag has been removed. A new <abbr> tag has been introduced in HTML5.
+
+3. Difference in usage of <hr> tag
+
+The <hr> tag was used to draw a line in HTML4 and all the previous versions of HTML, however in HTML5, the functionality of this tag has been changed and it is used for defining a thematic break in the web page.
+
+4. Difference in usage of <a> tag
+
+In HTML4 and previous versions, the <a> tag was used as anchor as well as for referring to a link. In the HTML5, the <a> tag is used only as a hyperlink. But if the href tag is removed from the <a> tag, the <a> tag can be used as a place holder for other hyperlinks.
+
+5. Schema attribute removed from <meta> tag in HTML5
+
+The <meta> tag is defined in the header section of the HTML document and contains information about the data. In the previous versions of HTML, including the HTML4, this tag used to contain an attribute called schema that defined the schema of the document. However, in HTML5, this tag has been removed.
+
+Changes in attributes
+
+Following are some of the attributes that have been modified in HTML5.
+
+	◦	In HTML4 and previous HTML versions, script attribute was used to in link tag to refer to JavaScript or other similar scripts. In HTML5 It is not necessary to use that script attribute.
+	◦	In HTML5, the <table> tag can only have one attribute Border and the value of this attribute can only be zero or one. Previously, the <table> tag had many attributes.
+	◦	In the previous versions of HTML, the <meta> tag didn’t had the charset attribute that defines the standard character encoding for the webpage. This attribute has been added in HTML5.
+
+HTML5 New Tags:
+
+1. <canvas> Tag:
+
+A canvas is a rectangular area on an HTML page. The <canvas> tag is used to draw graphics using JavaScript. It is only a container for graphics. Inside this container, graphics are drawn using JavaScript. Canvas has different methods for paths, circles, boxes, characters and adding images. By default it has no border and no content.
+The markup looks like this:
+
+<canvas id="canvas1" width =”400” height= “300”>Update your browser</canvas>
+
+The id attribute is used to refer the canvas in the script and width and height are used to define the size of the canvas.
+
+You can have multiple canvases on one html page. The first example of this tutorial demonstrates the usage of canvas element.
+2. New Media Elements in HTML5:
+
+HTML 5 has included several new media elements for displaying media content. Following are some of the most important media elements included in HTML5.
+	◦	<audio>
+	◦	<embed>
+	◦	<source>
+	◦	<track>
+	◦	<video>
+
+2a. <video> Tag:
+
+HTML5 defines a new element which specifies a standard way to embed a video file on a web page. The file formats supported for the <video> element are:
+	◦	Mp4
+	◦	WebM
+	◦	Ogg
+The second example of this tutorial demonstrates the usage of the new video element that is used to embed video files in a webpage. Have a look at the following example.
+2b. <audio> Tag:
+
+HTML5 defines a new element which specifies a standard way to embed an audio file on a web page. The file formats supported for the <audio> element are:
+	◦	Mp3
+	◦	Wav
+	◦	Ogg
+3. <article> Tag:
+
+The <article> element shows the portion of a web page that contains a complete and independent material.
+	◦	An article from magazine or newspaper
+	◦	A blog entry
+	◦	Any comment by user
+	◦	Or some other content item.
+4. <main> Tag
+
+The <main> tag is also a new addition in HTML5. The <main> tag describes the material which is specific to only that document. The material which is used again and again in the documents should not be included in the <main> tag.The <main> tag can be used only one time in a page. There should be no other <main> on the same page.Another rule to be followed is that <main> tag cannot be used as descendant of an <article>, < aside >, < header >, <footer>, or <nav> element. Example8 demonstrates the usage of <main> tag. The fifth example of this tutorial demonstrates the usage of the <main> tag.
+5. <mark> Tag:
+
+The <mark> element allows you to highlight text in a webpage. The tag has also been introduced in HTML5 and did not exist previously. The following example demonstrates the usage of <mark> tag.
+
+Reference4 :
+Reference5 :
 3) sematic elements ? what are them, why we use
+Reference1 :
+A semantic element clearly describes its meaning to both the browser and the developer.
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+Reference2 :
+semantics refers to the correct interpretation of the meaning of a word or sentence. To use a word semantically is to use it in a way that is properly aligned with the meaning of the word. When we misuse a word we are not using it semantically. Many HTML tags have semantic meaning. That is, the element itself conveys some information about the type of content contained between the opening and closing tags. For example, when a browser encounters an h1 heading it interprets that tag to mean that the contents of the h1 element constitute the most important heading of the section that contains the element. The semantic meaning of an h1 tag is that it is used to identify the most important header of a specific web page or section.
+Reference3:
+Semantic HTML or semantic markup is HTML that introduces meaning to the web page rather than just presentation.
+Reference4 :
+This primarily means that separate HTML elements need to have their distinguishable structural roles. According to the definition of W3C “a semantic element clearly describes its meaning to both the browser and the developer”.
+Reference5 :
+Semantic html is using html to reinforce structural meaning. It’s about using tags, class names, and ids that reinforce the meaning of the content within the tags.
+When content is a paragraph of text you mark it up with paragraph tags. When you have a list of items you use list tags. If there’s some order to the list items you use an ordered list and when the order isn’t important you use an unordered list.Each of the tags mentioned is semantic since they describe the content inside the tag.
+
 4) media elements (audio and video)
+Reference1 :
+<audio>	Defines sound content
+<video>	Defines a video or movie
+<source>	Defines multiple media resources for <video> and <audio>
+<embed>	Defines a container for an external application or interactive content (a plug-in)
+<track>	Defines text tracks for <video> and <audio>
+
+Reference2 :
+Media elements are used to present audio data, or video and audio data, to the user. This is referred to as media data in this section, since this section applies equally to media elements for audio or for video. The term media resource is used to refer to the complete set of media data, e.g. the complete video file, or complete audio file.
+A media resource can have multiple audio and video tracks. For the purposes of a media element, the video data of the media resource is only that of the currently selected track (if any) given by the element's videoTracks attribute, and the audio data of the media resource is the result of mixing all the currently enabled tracks (if any) given by the element's audioTracks attribute.
+Reference3:
+The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video. The HTMLVideoElement and HTMLAudioElement elements both inherit this interface.
+Reference4 :
+
+Reference5 :
 5) HTML5 Api's (storage, web workers, file api, navigator, application cache)
+Reference1 :
+storage:
+The Storage interface of the Web Storage API provides access to the session storage or local storage for a particular domain, allowing you to for example add, modify or delete stored data items.
+If you want to manipulate the session storage for a domain, you call Window.sessionStorage method; If you want to manipulate the local storage for a domain, you call Window.localStorage.
+web workers:
+Web Workers provide a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using XMLHttpRequest (although the responseXML and channel attributes are always null). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa.) This article provides a detailed introduction to using web workers.
+file api:
+Using the File API, which was added to the DOM in HTML5, it's now possible for web content to ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML <input> element or by drag and drop.
+If you want to use the DOM File API from extensions or other browser chrome code, you can; however, note there are some additional features to be aware of. See Using the DOM File API in chrome code for details.
+Consider this HTML:
+<input type="file" id="input">
+
+The File API makes it possible to access a FileList containing File objects representing the files selected by the user.
+If the user selects just one file, it is then only necessary to consider the first file of the list.
+Accessing one selected file using a classical DOM selector:
+var selectedFile = document.getElementById('input').files[0];
+
+Accessing one selected file using a jQuery selector:
+var selectedFile = $('#input').get(0).files[0];
+
+var selectedFile = $('#input')[0].files[0];
+
+application cache:
+HTML5 introduces application cache, which means that a web application is cached, and accessible without an internet connection.
+Application cache gives an application three advantages:
+	1	Offline browsing - users can use the application when they're offline
+	2	Speed - cached resources load faster
+	3	Reduced server load - the browser will only download updated/changed resources from the server
+The Manifest File
+The manifest file is a simple text file, which tells the browser what to cache (and what to never cache).
+The manifest file has three sections:
+	•	CACHE MANIFEST - Files listed under this header will be cached after they are downloaded for the first time
+	•	NETWORK - Files listed under this header require a connection to the server, and will never be cached
+	•	FALLBACK - Files listed under this header specifies fallback pages if a page is inaccessible
+CACHE MANIFEST
+The first line, CACHE MANIFEST, is required:
+CACHE MANIFEST
+/theme.css
+/logo.gif
+/main.js
+The manifest file above lists three resources: a CSS file, a GIF image, and a JavaScript file. When the manifest file is loaded, the browser will download the three files from the root directory of the web site. Then, whenever the user is not connected to the internet, the resources will still be available.
+NETWORK
+The NETWORK section below specifies that the file "login.asp" should never be cached, and will not be available offline:
+NETWORK:
+login.asp
+An asterisk can be used to indicate that all other resources/files require an internet connection:
+NETWORK:
+*
+FALLBACK
+The FALLBACK section below specifies that "offline.html" will be served in place of all files in the /html/ catalog, in case an internet connection cannot be established:
+FALLBACK:
+/html/ /offline.html
+Note: The first URI is the resource, the second is the fallback.
+
+Updating the Cache
+Once an application is cached, it remains cached until one of the following happens:
+	•	The user clears the browser's cache
+	•	The manifest file is modified (see tip below)
+	•	The application cache is programmatically updated
+Example - Complete Cache Manifest File
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+/theme.css
+/logo.gif
+/main.js
+
+NETWORK:
+login.asp
+
+FALLBACK:
+/html/ /offline.html
+
+
+Reference2 :
+storage:
+Storage objects are simple key-value stores, similar to objects, but they stay intact through page loads.  The keys and the values are always strings (note that integer keys will be automatically converted to strings, just like what objects do). You can access these values like an object, or with the getItem() and setItem() methods.  These three lines all set the colorSetting entry in the same way:
+localStorage.colorSetting = '#a4509b';
+localStorage['colorSetting'] = '#a4509b';
+localStorage.setItem('colorSetting', '#a4509b');
+
+
+The two mechanisms within Web Storage are as follows:
+	•	sessionStorage maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).
+	•	localStorage does the same thing, but persists even when the browser is closed and reopened.
+These mechanisms are available via the Window.sessionStorage and Window.localStorage properties (to be more precise, in supporting browsers the Window object implements the WindowLocalStorage and WindowSessionStorage objects, which the localStorage and sessionStorage properties hang off) — invoking one of these will create an instance of the Storage object, through which data items can be set, retrieved, and removed. A different Storage object is used for the sessionStorage and localStorage for each origin — they function and are controlled separately.
+So, for example, initially calling localStorage on a document will return a Storage object; calling sessionStorage on a document will return a different Storage object. Both of these can be manipulated in the same way, but separately.
+web workers:
+file api:
+application cache:
+Reference3:
+storage:
+web workers:
+file api:
+application cache:
+Reference4 :
+storage:
+web workers:
+file api:
+application cache:
+Reference5 :
+storage:
+web workers:
+file api:
+application cache:
 6) differences between cookie, local storage and session storgae
+Reference1 :
+sessionStorage, localStorage and Cookies all are used to store data on the client side. Each one has its own storage and expiration limit.
+localStorage: stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser Cache / Locally Stored Data
+sessionStorage: similar to localStorage but expires when the browser closed (not the tab).
+Cookie: stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side (normally from server-side).
+Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
+Reference2 :
+localStorage and sessionStorage are both so-called WebStorages and features of HTML5.
+localStorage stores information as long as the user does not delete them.
+sessionStorage stores information as long as the session goes. Usually until the user closes the tab/browser.
+cookies are simply cookies, which are supported by older browsers and usually are a fallback for frameworks that use the above mentioned WebStorages.
+In contrast cookies can store way less information then WebStorages and the information in WebStorages is never transferred to the server.
+Keep in mind that the EU has a regulation that requires websites to inform their users about the usage of cookies. I dont know whether this also applies to WebStorage
+Reference3:
+
+Reference4 :
+Reference5 :
 7) why div and span?
+Reference1:
+<div> is a block-level element and <span> is an inline element.
+If you wanted to do something with some inline text, <span> is the way to go since it will not introduce line breaks that a <div> would.
+
+Reference2 :
+Reference3:
+Reference4 :
+Reference5 :
 8) why inline and block elements
+Reference1 :
+Block-level Elements
+A block element is an element that has, but may not be limited to, the following characteristics:
+	▪	If no width is set, will expand naturally to fill its parent container
+	▪	Can have margins and/or padding
+	▪	If no height is set, will expand naturally to fit its child elements (assuming they are not floated or positioned)
+	▪	By default, will be placed below previous elements in the markup (assuming no floats or positioning on surrounding elements)
+	▪	Ignores the vertical-align property
+So, for a block element, it’s not necessary to give it a set width or to give it a width of 100% if you want it to fill its parent horizontally. In fact, doing either of those things may cause maintainability issues or other undesirable problems.
+And, as the fourth item in the above list indicates, it’s also not necessary to “clear” a block element; assuming no floats are affecting the block element, it will be cleared automatically and will start on the next “line” in the page’s output.
+Examples of Block Elements:
+<p>, <div>, <form>, <header>, <nav>, <ul>, <li>, and <h1>.
+
+Inline Elements
+An inline element has, but may not be limited to, the following characteristics:
+	▪	Flows along with text content, thus
+	▪	Will not clear previous content to drop to the next line like block elements
+	▪	Is subject to white-space settings in CSS
+	▪	Will ignore top and bottom margin settings, but will apply left and right margins, and any padding
+	▪	Will ignore the width and height properties
+	▪	If floated left or right, will automatically become a block-level element, subject to all block characteristics
+	▪	Is subject to the vertical-align property
+The easiest way to picture an inline element is to think of it as a box that acts like text. What happens, for example, to text that’s not separated by other elements? It flows one letter after the other. If you put an inline element next to text, it will flow next to that text just like another piece of text.
+Examples of Inline Elements:
+<a>, <span>, <b>, <em>, <i>, <cite>, <mark>, and <code>.
+Reference2 :
+There are a couple of key differences between block-level elements and inline elements:
+Formatting
+By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.
+Content model
+Generally, block-level elements may contain inline elements and other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.
+The distinction of block-level vs. inline elements is used in HTML specifications up  to 4.01. In HTML5, this binary distinction is replaced with a more complex set of content categories. The "block-level" category roughly corresponds to the category of flow content in HTML5, while "inline" corresponds to phrasing content, but there are additional categories.
+
+Reference3:
+
+Reference4 :
+Reference5 :
 9) differences between xhtml, dtml and regular html
+Reference1 :
+HTML is a markup language that is used to build static (non interactive and nonanimated) webpages. 
+XHTML is an xml markup language that mirrors HTML syntaxes.
+HTML5 is the latest revision of HTML containing much better support for media like video and audio tags.
+DHTML stands for Dynamic HTML and is a combination of static code like HTML, and dynamic scripting languages like JavaScript, used to create interactive and animated websites.
+Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.
+Reference2 :
+HTML:
+HTML stands for HyperText Markup Language. It is a well known mark up language used to develop web pages. It has been around for a long time and is commonly used in webpage design.
+XML:
+ XML or Extensible Markup Language defines a set of rules for encoding documents in a format that can be read by both, human and computer.
+XHTML:
+XHTML, on the other hand, stands for Extensible HyperText Markup Language. It is a markup language written in XML. It is a collection of XML markup languages that mirror or extend versions of HTML. Essentially, it is a hybrid between HTML and XML specifically designed for Net device displays. It is HTML defined as an XML application.
+DHTML:
+Whereas, DHTML is essentially Dynamic HTML. It is a new way of looking at and controlling the standard HTML codes and commands. DHTML is a collection of technologies that are used to create interactive and animated web sites. DHTML gives more control over the HTML elements. It allows one to incorporate a client-side scripting language, such as JavaScript, a presentation definition language, such as CSS, and the Document Object Model in HTML web pages. 
+
+Reference3:
+XHTML:
+The XHTML standard has been dropped in favor of HTML 5 which is designed for the modern web. At a time there were two competing upcoming standards: HTML 5 and XHTML 2.0, but XHTML 2.0 was scrapped.
+ HTML5:
+HTML 5 is already "standardized" and the W3C and WHATWG encourage its use, saying that the sooner developers are using it the faster it will be fully implemented in all browsers. A large amount of HTML 5 features are fully functional and those that aren't can fall back to other methods.
+ DHTML:
+DHTML is a 90s term that just means a combination of HTML, Javascript and CSS to make interactive pages. The term hasn't been used in forever so I would just forget about it if I were you.
+Reference4 :
+
+Reference5 :
+HTML:
+HTML is a Hyper Text Markup Language which is used to display the internet website contents on the internet browsers. This is the common language to develop the web site pages.
+DHTML:
+DHTML is Dynamic HTML(DHTML) which will be used to display the dynamic web site pages. It is not a standard defined by the World Wide Web Consortium (W3C), it is a "marketing term" that was used by Netscape and Microsoft
+to describe the new technologies the 4.x generation browsers would support. Dynamic HTML is a combination of technologies to make Web pages dynamic. To most people, Dynamic HTML means a combination of HTML 4.0, Style Sheets and JavaScript.
+XHTML:
+XHTML is similar to the HTML but follows the rules of XML. XHTML is used to be compatible with XML programming. Following the rules now would make it possible to include XML programming in the future. It is not difficult to change HTML pages to XHTML, but it can be time-consuming. Finding all line breaks and images to include closing tags, converting any uppercase to lowercase and any other incompatibility can be a nuisance. Using a find and replace program can allow you to edit your code faster, but you still have to reupload all those changes. It is recommended that programmers try to remember these rules to comply with W3C recommendations, so the web pages appear correctly in most browsers. The main differences between HTML and XHTML is the case-sensitivity, the need to use closing tags for all tags, the need to use quotes around all attribute values and that all attributes must be in lowercase as XML requires.
+
 10) what is header, footer, aside, nav, menu
-11) what is iframe? what is frameset? 
-12) What is canvas and how use it? how have you used in your 
-13) svg? 
+Reference1 :
+Header:
+The <header> element represents a container for introductory content or a set of navigational links.
+A <header> element typically contains:
+	•	one or more heading elements (<h1> - <h6>)
+	•	logo or icon
+	•	authorship information
+Footer:
+The <footer> tag defines a footer for a document or section.
+A <footer> element should contain information about its containing element.
+A <footer> element typically contains:
+	•	 authorship information
+	•	copyright information
+	•	contact information
+	•	sitemap
+	•	back to top links
+	•	related documents
+You can have several <footer> elements in one document.
+Aside:
+The <aside> tag defines some content aside from the content it is placed in.
+
+The aside content should be related to the surrounding content.
+Nav:
+The HTML <nav> element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+Reference2 :
+Header:
+ …introductory content for its nearest ancestor sectioning content or sectioning root element. A header typically contains a group of introductory or navigational aids.
+When the nearest ancestor sectioning content or sectioning root element is the body element, then it applies to the whole page.
+Footer:
+The HTML <footer> element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
+Aside:
+The aside element is new to HTML5 and it can be used in two different contexts. Basically, the context of the <aside> element is based on whether or not it inside or outside the article element.
+In magazines you often see info-boxes pulled away from the actual content of the article, highlighting something with relevance to the article such as pull-quotes and when this is the scope of your aside element then it has to be placed inside the article element, because it has a relationship to the content of the article.
+Nav:
+The <nav> tag defines a set of navigation links.
+
+Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links.
+
+Reference3:
+Header:
+The <header> element is intended to usually contain the section's heading (an <h1>-<h6> element or an <hgroup> element), but this is not required. The <header> element can also be used to wrap a section's table of contents, a search form, or any relevant logos.
+Footer:
+The footer element represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
+Aside:
+The HTML <aside> tag is an HTML 5 element that defines a section that is tangentially related to the content around it in the HTML document. This tag is also commonly referred to as the <aside> element.
+Reference4 :
+Header:
+The new HTML5 elements, fortunately, are described with a very logical name and according to the specification the header element represents “A group of introductory or navigational aids.” (It is in my opinion that it is much better citing from the official and legitimate source for an accurate description, as often times the meaning could be distorted).
+Footer:
+The HTML <footer> tag is used for defining the footer of an HTML document or section.
+Footers usually contain information such as the author of the document, copyright information, links to terms of use, privacy policy, etc.
+Contact information within a <footer> tag should be marked up using the <address> tag
+Although footers are typically located at the bottom of a document, this is not required (although it cannot be placed within a <header> or another <footer> element, and it cannot contain a <header> element).
+Aside:
+W3C goes on to say: "The element can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content of the page." *
+Nav:
+The nav element represents a section of a page that links to other pages or to parts within the page: a section with navigation links. Not all groups of links on a page need to be in a nav element only sections that consist of major navigation blocks are appropriate for the nav element. In particular, it is common for footers to have a list of links to various key parts of a site, but the footer element is more appropriate in such cases, and no nav element is necessary for those links.
+Reference5 :
+Header:
+Head tag:
+The HTML <head> element provides general information (metadata) about the document, including its title and links to/definitions of scripts and style sheets. (HTML MDN)
+Header tag:
+The HTML <header> element represents a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, wrapped section's header, a search form, and so on. (HTML MDN)
+-
+In other words; the head tag is used for document title, styling, scripts, etc.
+Whereas the header tag is used for headers as seen in articles.
+Footer:
+Aside:
+The <aside> element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content.
+Example of contents
+    pull quotes
+    sidebars
+    advertising
+    groups of nav elements
+Nav:
+The HTML <nav> tag is used for declaring a navigational section of the HTML document.
+
+
+
+11) what is iframe? what is frameset?
+
+iframe:
+
+Reference 1:
+
+The <iframe> tag specifies an inline frame.
+
+An inline frame is used to embed another document within the current HTML document.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 2:
+
+
+The <iframe> creates an inline frame, which embeds an independent HTML document into the current document.
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 3:
+The <iframe> tag defines a rectangular region within the document in which the browser can display a separate document, including
+scrollbars and borders.
+
+The src attribute is used to specify the URL of the document that occupies the inline frame.
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 4:
+The HTML <iframe> element represents a nested browsing context, effectively embedding another HTML page into the current page.
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 5:
+
+An iframe or inline frame is used to display external objects including other web pages within a web page
+
+==================================================================================================================================
+
+FrameSet:
+
+
+Reference 1:
+
+The <frameset> tag defines a frameset.
+
+The <frameset> element holds one or more <frame> elements. Each <frame> element can hold a separate document.
+
+The <frameset> element specifies HOW MANY columns or rows there will be in the frameset, and HOW MUCH percentage/pixels of space will occupy each of them.
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 2:
+There are few drawbacks with using frames, so it's never recommended to use frames in your webpages:
+
+Some smaller devices cannot cope with frames often because their screen is not big enough to be divided up.
+Sometimes your page will be displayed differently on different computers due to different screen resolution.
+The browser's back button might not work as the user hopes.
+There are still few browsers that do not support frame technology.
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 3:
+<frameset cols="50%,50%">
+  <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
+  <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+</frameset>
+
+==================================================================================================================================
+
+
+
+12) What is canvas and how use it? how have you used in your
+
+Reference 1:
+A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+
+The markup looks like this:
+<canvas id="myCanvas" width="200" height="100"></canvas>
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 2:
+The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.
+
+The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+
+Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 3:
+<canvas> is an HTML element which can be used to draw graphics using scripting (usually JavaScript). This can, for instance, be used to draw graphs, make photo composition or simple (and not so simple) animations.
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 4:
+The <canvas> element can seem confusing at first glance. Often described as an HTML5 element you can use for drawing purposes, the truth is, the element is only a container that you can draw in via other methods (such as JavaScript).
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 5:
+The canvas element is an element defined in HTML code using width and height attributes. The real power of the canvas element, however, is accomplished by taking advantage of the HTML5 Canvas API. This API is used by writing JavaScript that can access the canvas area through a full set of drawing functions, thus allowing for dynamically generated graphics.
+
+==================================================================================================================================
+13) svg?
+
+
+Reference 1:
+
+    SVG stands for Scalable Vector Graphics
+    SVG is used to define graphics for the Web
+    SVG is a W3C recommendation
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 2:
+
+    Small file sizes that compress well
+    Scales to any size without losing clarity (except very tiny)
+    Looks great on retina displays
+    Design control like interactivity and filters
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Reference 3:
+SVG stands for Scalable Vector Graphics and it is a language for describing 2D-graphics and graphical applications in XML and the XML is then rendered by an SVG viewer.
+
+SVG is mostly useful for vector type diagrams like Pie charts, Two-dimensional graphs in an X,Y coordinate system etc.
+
+==================================================================================================================================
 14) diff between svg and canvas?
+Reference 1:
+Canvas
+
+    Pixel based (Dynamic .png)
+    Single HTML element.(Inspect element in Developer tool. You can see only canvas tag)
+    Modified through script only
+    Event model/user interaction is granular (x,y)
+    Performance is better with smaller surface, a larger number of objects (>10k), or both
+
+SVG
+
+    Shape based
+    Multiple graphical elements, which become part of the DOM
+    Modified through script and CSS
+    Event model/user interaction is abstracted (rect, path)
+    Performance is better with smaller number of objects (<10k), a larger surface, or both
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 2:
+SVG:
+
+    Vector based (composed of shapes)
+    Multiple graphical elements, which become the part of the DOM
+    Modified through script and CSS
+    Give better performance with smaller number of objects or larger surface, or both
+    Better scalability — can be printed with high quality at any resolution
+
+CANVAS :
+
+    Raster based (composed of pixel)
+    Single HTML element similar to <img> in behavior
+    Modified through script only
+    Give better performance with smaller surface or larger number of objects, or both
+    Poor scalability — not suitable for printing on higher resolution
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 3:
+Canvas:
+
+    Resolution dependent
+    No support for event handlers
+    Poor text rendering capabilities
+    You can save the resulting image as .png or .jpg
+    Well suited for graphic-intensive games
+
+	SVG
+		Resolution independent
+    Support for event handlers
+    Best suited for applications with large rendering areas (Google Maps)
+    Slow rendering if complex (anything that uses the DOM a lot will be slow)
+    Not suited for game applications
+==================================================================================================================================
 15) polyfills for html5 in ie8?
+Reference 1:
+In web development, a polyfill is code that implements a feature on web browsers that do not support the feature. Most often, it refers to a JavaScript library that implements an HTML5 web standard, either an established standard (supported by some browsers) on older browsers, or a proposed standard (not supported by any browsers) on existing browsers. Formally, "a polyfill is a shim for a browser API".[1]
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 2:
+A polyfill is a browser fallback, made in JavaScript, that allows functionality you expect to work in modern browsers to work in older browsers, e.g., to support canvas (an HTML5 feature) in older browsers.
+
+It's sort of an HTML5 technique, since it is used in conjunction with HTML5, but it's not part of HTML5, and you can have polyfills without having HTML5 (for example, to support CSS3 techniques you want).
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 3:
+A polyfill, or polyfiller as they are sometimes called, is a piece of code that provides a technology or function that you, as the developer, would expect the browser to support natively. It could also be summed up to the phrase “Regressive Enhancement”. Enhancing the browser – but focusing on older versions.
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 4:
+https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills
+==================================================================================================================================
 16) cross browser compatibilty in html
+Reference 1:
+1. Define Valid Doctype:
+2. CSS Reset:
+By default, Different browsers behave as per their default css rules. You need to explicitly define css to make same behavior for different browsers. I like Eric’s CSS reset:
+3. Conditional Comments:
+Try to use conditional comments instead of CSS hacks.
+With conditional comments you can link to separate style sheets for different browsers.
+4.Try to use javascript library like jQuery, YahooUI, MooTools, Dojo abstract away the differences in the DOM, AJAX and JavaScript.
+5. You can use Css Frameworks like BluePrint, 960 Grid. These are mostly cross browser compatible.
+See following to know which css framework is suitable for you.
+http://net.tutsplus.com/tutorials/html-css-techniques/which-css-grid-framework-should-you-use-for-web-design/
+
+6. Validate:
+The W3C Validation Service validates multiple versions of XHTML and HTML, outputting many useful errors and warnings to help users create a perfect website.
+W3C Validator: http://validator.w3.org/
+W3C Css Validator: http://jigsaw.w3.org/css-validator/
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 2:
+Only the way is Before use and HTML5 or CSS3 Property insure that what browser & what versions of these Browsers are support these Properties.
+
+For Checking current State of CSS: http://www.w3.org/Style/CSS/current-work it is most important to decide what we use or later
+
+Can I Use : http://caniuse.com
+
+For Checking compatibility : http://quirksmode.org/compatibility.html
+For Checking browser compatibility : http://css3test.com/
+For Checking compatibility : http://reference.sitepoint.com/
+For Checking Mozilla compatibility : https://developer.mozilla.org
+
+For Checking Safari compatibility   : https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/articles/standardcssproperties.html
+
+CSS Compatibility in IE :http://msdn.microsoft.com/en-us/library/hh781508%28v=vs.85%29.aspx
+
+For compatibility Scaning your Pages : http://www.modern.ie/en-us
+
+For Checking CSS3 browser compatibility ** http://css3test.com/
+
+*Read also*http://www.1stwebdesigner.com/design/tools-browser-compatibility-check/
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 3:
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 4:
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 5:
+
+==================================================================================================================================
