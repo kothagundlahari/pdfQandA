@@ -1,0 +1,150 @@
+1) diff between inline, inline-block, block -- display property?
+Reference 1:
+url: http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block
+
+
+	-------------------------------------------------------------------------------------------------------------------------------
+Reference 2:
+url: http://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block
+Inline elements:
+
+    respect left & right margins and padding, but not top & bottom
+    cannot have a width and height set
+    allow other elements to sit to their left and right.
+    see very important side notes on this here.
+
+Block elements:
+
+    respect all of those
+    force a line break after the block element
+
+Inline-block elements:
+
+    allow other elements to sit to their left and right
+    respect top & bottom margins and padding
+    respect height and width
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 3:
+url:https://css-tricks.com/almanac/properties/d/display/
+
+Inline
+
+The default value for elements. Think of elements like <span>, <em>, or <b> and how wrapping text in those elements within a string of text doesn't break the flow of the text.
+
+Inline Block
+
+An element set to inline-block is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a width and height which will be respected.
+
+Block
+
+A number of elements are set to block by the browser UA stylesheet. They are usually container elements, like <div>, <section>, and <ul>. Also text "blocks" like <p> and <h1>. Block level elements do not sit inline but break past them. By default (without setting a width) they take up as much horizontal space as they can.
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 4:
+url:  https://www.w3schools.com/css/css_display_visibility.asp
+Block-level Elements
+
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can)
+
+Inline Elements
+
+An inline element does not start on a new line and only takes up as much width as necessary.
+
+This is an inline <span> element inside a paragraph.
+
+Examples of inline elements:
+
+    <span>
+    <a>
+    <img>
+==================================================================================================================================
+2) display none and visbility hidden differences
+Reference 1:
+url: http://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone#133064s
+
+display:none means that the tag in question will not appear on the page at all (although you can still interact with it through the dom). There will be no space allocated for it between the other tags.
+
+visibility:hidden means that unlike display:none, the tag is not visible, but space is allocated for it on the page. The tag is rendered, it just isn't seen on the page.
+
+For example:
+
+test | <span style="[style-tag-value]">Appropriate style in this tag</span> | test
+
+Replacing [style-tag-value] with display:none results in:
+
+test |   | test
+
+Replacing [style-tag-value] with visibility:hidden results in:
+
+test |                        | test
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 2:
+url: https://www.thoughtco.com/display-none-vs-visibility-hidden-3466884
+Visibility
+
+Using the CSS property/value pair of visibility: hidden hides an element from the browser. however, that hidden element still takes up space in the layout. It's like you have basically made the element invisible, but it still remains in place and takes up the space it would have taken up had it been leftt alone.
+
+If you place a DIV on your page and use CSS to give it dimensions to take up 100x100 pixels, the visibility: hidden property will make the DIV not show on the screen, but the text following it will act like it's still there, respecting that 100x100 spacing.
+
+Honestly, the visibility property is not something I used very frequently, and certainly not on its own.  If I am also using other CSS properties like positioning to achieve the layout I wanted for a certain element, I could then use visibility to hide that item initially, only to "turn" it back on on hover.
+
+ That is one possible use of this property, but again, it is not something I turn to with any frequency.
+
+
+Display
+
+Unlike the visibility property, which leaves an element in normal document flow,display: none removes the element completely from the document. It does not take up any space, even though the HTML for it is still in the source code. This is because it is, indeed, removed from document flow. For all intents and purposes, the item is gone. This can be a good thing or a bad thing, depending on what your intentions are. It can also be damaging to your page if you misuse this property!
+
+I often use "display: none" when testing a page.  If I need an area to "go away" for a bit while so that I can test other areas of the page, I can use display: none for that.  The thing to remember, however, is that the element should be returned back to the page prior to the actual launch of that site. This is because an item that is removed from document flow in this method is not seen by search engines or screen readers, even though it may remain in the HTML markup.  In the past, this method was used as a black-hat method to try to influence search engine rankings, so items that are not displayed could be a red flag for Google to look into why that approach is being used.
+
+One way I do find display: none to be useful, and where I do use it on live, production websites, is when I am building a responsive site that may have elements that are available for one display size but not for others. You can use display: none to hide that element and then turn it back on with media queries later.  This is an acceptable use of display: none, because you are not trying to hid anything for nefarious reasons, but have a legitimate need to do so.
+
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 3:
+url: https://www.quora.com/What-is-the-difference-between-%E2%80%9Cvisibility-hidden%E2%80%9D-and-%E2%80%9Cdisplay-none%E2%80%9D
+
+When display:none ; the object is not added to DOM tree. And the tags will not occupy any page space.
+
+visibility: hidden; Object is added to the DOM tree but it is not shown , so the object occupies space in the HTML page but is not shown.
+-------------------------------------------------------------------------------------------------------------------------------
+Reference 4:
+url: http://www.c-sharpcorner.com/interview-question/what-is-the-difference-between-displaynone-and-visibilityhidden-style
+
+visibility: hidden hides the element, but it still takes up space in the layout. display: none removes the element completely from the document. It does not take up any space, even though the HTML for it is still in the source code.
+==================================================================================================================================
+
+3) box model?
+
+
+4) pseudo classes?
+5) flex?
+6) media queries
+7) position property differences static,  relative, absolute and fixed.
+8) css sprites --
+9) all css selectors?
+10) float ?
+11) box sizing
+12) css animations
+13) css gradients
+14) break points used in media quires in your project?
+15) cross browser compatibilty and polyfills used?
+16) what is responsive web design?
+17) preprocessor?
+18) name spaces in css?
+19) what is differences border, padding and margin?
+20) z-index?
+21) font-styles used in project
+22) internal, inline and external? what needs to be used
+23) what is css specificity?
+24) what is !important
+25) Responsive Wed Design  and Adaptive web design?
+26) how have you used with in your projects of all above properties
+27) CSS Shorthand properties
+28) grouping in css through selectors?
+29) css2 and css3 differences and css3 properties ?
+30) overflow porperty in css?
+31) what is view port
